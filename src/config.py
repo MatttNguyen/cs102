@@ -37,13 +37,13 @@ class GameConfig:
     PLAYER_SOFT_EDGE_WIDTH: int = 300
 
     MENU_MUSIC: Path = ASSET_DIR / "sounds" / "background" / "menu.wav"
-    MENU_MUSIC_VOLUME: float = 0.12
+    MENU_MUSIC_VOLUME: float = 0.2
 
     BONUS_LEVEL_END_MUSIC: Path = ASSET_DIR / "sounds" / "background" / "victory.wav"
     DEFEATED_MUSIC: Path = ASSET_DIR / "sounds" / "background" / "defeated.wav"
 
-    INGAME_MUSIC_VOLUME: float = 0.05
-    SOUND_EFFECT_VOLUME: float = 0.18
+    INGAME_MUSIC_VOLUME: float = 0.2
+    SOUND_EFFECT_VOLUME: float = 0.1
 
 
 class LevelLoadingBarConfig:
@@ -75,7 +75,7 @@ class PlayerConfig:
     JUMP_WITH_TRAMPOLINE_SPEED: int = 40
     # minimal time until switching to the next sprite in sequence
     ANIMATION_INTERVAL_MS: int = 70 * 60 // GameConfig.FPS
-    INITIAL_HP: int = 3
+    INITIAL_HP: int = 10
     INVULNERABLE_DURATION_MS: int = 1000
 
     HURT_DURATION_MS: int = 80 * 4
@@ -87,7 +87,7 @@ class PlayerConfig:
 class PlayerHpConfig:
     X: int = 10
     Y: int = 30
-    X_STEP: int = 60  # distance between 2 consecutive hearts
+    X_STEP: int = 40  # distance between 2 consecutive hearts
     FULL_HEART_PATH: Path = ASSET_DIR / "items" / "full_heart.png"
     EMPTY_HEART_PATH: Path = ASSET_DIR / "items" / "empty_heart.png"
 
@@ -120,22 +120,22 @@ class PlayerBulletConfig:
 
 class ShadowConfig:
     SPRITE_PATH: Path = ASSET_DIR / "npcs" / "shadow"
-    SCALE: float = 0.2
+    SCALE: float = 0.1
     ANIMATION_INTERVAL_MS: int = 200
-    SPEED: int = 1
+    SPEED: int = 2
     DAMAGE: int = 1
 
 
 class ShadowBossConfig:
     SPRITE_PATH: Path = ASSET_DIR / "npcs" / "shadow"
-    SCALE: float = 0.6
+    SCALE: float = 0.4
     ANIMATION_INTERVAL_MS: int = 200
-    SPEED: int = 1
-    DAMAGE: int = 1
-    INITIAL_HP: int = 100
+    SPEED: int = 4
+    DAMAGE: int = 3
+    INITIAL_HP: int = 500
 
-    ANGRY_INTERVAL_MS: int = 7000
-    ANGRY_DURATION_MS: int = 2000
+    ANGRY_INTERVAL_MS: int = 4000
+    ANGRY_DURATION_MS: int = 1000
 
     HURT_DURATION_MS: int = 500
 
@@ -144,11 +144,11 @@ class ShadowBulletConfig:
     SPRITE_PATH: Path = ASSET_DIR / "items" / "shadow_bullet.png"
     SCALE: float = 0.05
     SPEED: int = 5
-    GRAVITY: int = 0.3
+    GRAVITY: int = 0.5
     DAMAGE: int = 1
 
     # initial vertical movement
-    INIT_DY: int = -15
+    INIT_DY: int = -10
 
     # the time between creation and deletion of entities of this type
     TTL_MS: int = 3000

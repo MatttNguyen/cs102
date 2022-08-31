@@ -33,6 +33,7 @@ class Player(AnimatedEntity):
         self.hp: int = PlayerConfig.INITIAL_HP
         self.max_hp: int = PlayerConfig.INITIAL_HP
         self.hp_entity_id: Optional[int] = None
+        self.cooldown_ready = 0
 
         self.last_hit_t: int = 0
 
@@ -102,6 +103,7 @@ class Player(AnimatedEntity):
         self.world.get_entity(self.inventory_entity_id).set_inventory(self.inventory)
 
     def _handle_events(self):
+        self.cooldown()
         """
         This subject is controllable by user, we ask it to move based on keyboard inputs here.
         """
@@ -122,7 +124,7 @@ class Player(AnimatedEntity):
                 self.move_right(False)
             elif event.is_key_up(pygame.K_e):
                 self._handle_activation()
-            elif event.is_key_down(pygame.K_f):
+            elif event.is_key_down(pygame.K_f) and self.cooldown_ready == 0:
                 self._handle_throw()
             elif event.is_type(EventType.NPC_DIALOGUE_END):
                 self.talking = False
@@ -176,6 +178,12 @@ class Player(AnimatedEntity):
             ball.move_left()
         else:
             ball.move_right()
+        self.cooldown_ready = 1
+    def cooldown(self) :
+        if self.cooldown_ready >= 20:
+            self.cooldown_ready = 0
+        elif self.cooldown_ready > 0:
+            self.cooldown_ready += 1
 
     def _handle_get_hit(self):
         for bullet in self.world.get_entities(EntityType.SHADOW_BULLET):
