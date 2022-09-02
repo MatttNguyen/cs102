@@ -44,6 +44,7 @@ class GameConfig:
 
     INGAME_MUSIC_VOLUME: float = 0.2
     SOUND_EFFECT_VOLUME: float = 0.1
+    DO_PLAY_LOOP: int = 0
 
 
 class LevelLoadingBarConfig:

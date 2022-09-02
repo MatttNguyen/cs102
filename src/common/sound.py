@@ -13,6 +13,7 @@ from common.util import get_logger
 from config import ASSET_DIR, GameConfig
 
 logger = get_logger(__name__)
+do_play_loop: int = 0
 
 
 @functools.lru_cache(maxsize=None)
@@ -40,6 +41,11 @@ def play_sounds(events: Sequence[GameEvent]):
 
 
 def load_music(path: Path, volume: float, play: bool):
+    if path == GameConfig.DEFEATED_MUSIC:
+        GameConfig.DO_PLAY_LOOP = 0
+    else:
+        GameConfig.DO_PLAY_LOOP = -1
+    
     if pygame.mixer.music.get_busy():
         pygame.mixer.music.fadeout(300)
     pygame.mixer.music.unload()
@@ -48,7 +54,7 @@ def load_music(path: Path, volume: float, play: bool):
         return
 
     pygame.mixer.music.load(path)
-    pygame.mixer.music.play(loops=-1, fade_ms=1500)
+    pygame.mixer.music.play( loops = GameConfig.DO_PLAY_LOOP, fade_ms=1500)
     if not play:
         pygame.mixer.music.pause()
 
