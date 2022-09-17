@@ -44,13 +44,13 @@ class Menu(BaseScene):
                 if 1 < level_id < 10:
                     frame.pack(
                         self.menu.add.button(
-                            f"[dev-mode] Play Level {level_id}",
+                            f"Play Level {level_id}",
                             partial(start_game, level_id),
                         )
                     )
             frame.pack(
                 self.menu.add.button(
-                    "[dev-mode] Victory Scene",
+                    "Victory Scene",
                     GameEvent(EventType.VICTORY).post,
                 )
             )

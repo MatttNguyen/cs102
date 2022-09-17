@@ -44,10 +44,10 @@ class GameConfig:
     MENU_MUSIC_VOLUME: float = 0.12
 
     DEFEATED_MUSIC: Path = ASSET_DIR / "sounds" / "background" / "defeated.wav"
-    VICTORY_MUSIC: Path = ASSET_DIR / "sounds" / "background" / "victory.wav"
-    BONUS_LEVEL_END_MUSIC: Path = ASSET_DIR / "sounds" / "background" / "victory.wav"
+    VICTORY_MUSIC: Path = ASSET_DIR / "sounds" / "background" / "victory.mp3"
+    BONUS_LEVEL_END_MUSIC: Path = ASSET_DIR / "sounds" / "background" / "victory.mp3"
 
-    INGAME_MUSIC_VOLUME: float = 0.05
+    INGAME_MUSIC_VOLUME: float = 0.2
     SOUND_EFFECT_VOLUME: float = 0.18
 
 
@@ -110,8 +110,8 @@ class PlayerInventoryConfig:
 
 
 class PlayerBulletConfig:
-    SPRITE_PATH: Path = ASSET_DIR / "items" / "player_bullet.png"
-    SCALE: float = 0.7
+    SPRITE_PATH: Path = ASSET_DIR / "items" / "fireball.png"
+    SCALE: float = 0.1
     SPEED: int = 35
     GRAVITY: int = 2
     DAMAGE: int = 10
@@ -125,7 +125,7 @@ class PlayerBulletConfig:
 
 class ShadowConfig:
     SPRITE_PATH: Path = ASSET_DIR / "npcs" / "shadow"
-    SCALE: float = 0.2
+    SCALE: float = 0.1
     ANIMATION_INTERVAL_MS: int = 200
     SPEED: int = 1
     DAMAGE: int = 1

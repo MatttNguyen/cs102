@@ -18,7 +18,6 @@ logger = get_logger(__name__)
 @functools.lru_cache(maxsize=None)
 def get_sound(path: Path) -> Optional[Sound]:
     if path.exists():
-        logger.info(f"Lazily loading sound at: {path}")
         sound = Sound(path)
         sound.set_volume(GameConfig.SOUND_EFFECT_VOLUME)
         return sound

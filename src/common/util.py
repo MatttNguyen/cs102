@@ -106,5 +106,4 @@ def get_available_level_ids() -> Iterable[int]:
             and not level_data_file.is_dir()
         ]
     )
-    logger.info(f"Detected available levels: {level_ids}")
     return level_ids

@@ -38,7 +38,7 @@ class Shadow(AnimatedEntity):
 
     def die(self):
         super().die()
-        self.set_remaining_ttl_ms(self.animation_interval_ms * 6)
+        self.set_remaining_ttl_ms(self.animation_interval_ms * 3)
 
     def _handle_get_hit(self):
         for bullet in self.world.get_entities(EntityType.PLAYER_BULLET):
