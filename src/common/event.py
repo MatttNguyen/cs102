@@ -18,6 +18,7 @@ class EventType(enum.Enum):
     """
 
     TOGGLE_SOUND = pygame.event.custom_type()
+    TOGGLE_GENDER = pygame.event.custom_type()
     SHOW_MENU_AND_RESET_LEVEL_ID = pygame.event.custom_type()
     START_GAME = pygame.event.custom_type()
     RESUME_GAME = pygame.event.custom_type()

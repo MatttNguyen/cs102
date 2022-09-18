@@ -17,6 +17,10 @@ class EntityType(enum.Enum):
     EMPTY = 0
     GROUND_A = 1
     GROUND_B = 2
+    GROUND_C = 3
+    GROUND_D = 4
+    GROUND_E = 5
+    GROUND_F = 6
 
     PLAYER = 20
     SHADOW = 21
@@ -32,13 +36,13 @@ class EntityType(enum.Enum):
     SHADOW_BOSS = 40
 
     # Collectable Items 60 -> 79
-    CANDY = 60
-    HEART = 61
+    DIAMONDS = 60
+    BOMB = 61
 
     # When the player collects this item, the level ends.
     # For regular levels (ie. no special end-level condition), when designing the CSV file
     # you can put this item at the end of the map.
-    LEVEL_END_FLAG = 99
+    TIME_MACHINE = 99
 
     QUESTION_MARK = 101
     DIALOGUE_BOX = 102
@@ -51,14 +55,14 @@ class EntityType(enum.Enum):
     ENDING_BURGER = 108
 
 
-OBSTACLES_TYPES = (EntityType.GROUND_A, EntityType.GROUND_B)
+OBSTACLES_TYPES = (EntityType.GROUND_A, EntityType.GROUND_B, EntityType.GROUND_C, EntityType.GROUND_D, EntityType.GROUND_E, EntityType.GROUND_F)
 FRIENDLY_NPC_TYPES = (EntityType.NPC_CO_NGA, EntityType.NPC_CHU_NAM, EntityType.NPC_CHU_NHAN)
 TRAMPOLINE_PART_TYPES = (EntityType.TRAMPOLINE_PART_SPRING, EntityType.TRAMPOLINE_PART_FRAME)
 
 COLLECTABLE_TYPES = (
-    EntityType.LEVEL_END_FLAG,
-    EntityType.HEART,
-    EntityType.CANDY,
+    EntityType.TIME_MACHINE,
+    EntityType.DIAMONDS,
+    EntityType.BOMB,
 ) + TRAMPOLINE_PART_TYPES
 
 FIXED_POSITION_TYPES = (EntityType.DIALOGUE_BOX, EntityType.PLAYER_HP, EntityType.PLAYER_INVENTORY)

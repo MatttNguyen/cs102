@@ -12,13 +12,11 @@ logger = logging.getLogger(__name__)
 
 class GameManager:
     def __init__(self):
-        logger.info("GameManager Initializing...")
         self.screen = pygame.display.set_mode([GameConfig.WIDTH, GameConfig.HEIGHT])
         self.clock = pygame.time.Clock()
         self.world_manager = WorldManager(self.screen)
 
     def run(self):
-        logger.info("GameManager Running...")
         is_running = True
         while is_running:
             self.screen.fill(pygame.Color("black"))

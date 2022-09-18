@@ -31,12 +31,14 @@ class Color:
 
 class GameConfig:
     DEBUG: bool = True
-    NAME: str = "STEAM Valley"
+    NAME: str = "JuraKid"
     FPS: int = 60
     WIDTH: int = 1248
     HEIGHT: int = 768
     TILE_SIZE: int = 48
     PLAYER_SOFT_EDGE_WIDTH: int = 300
+    PLAYER_GENDER: str = "boy" #Change player's gender
+    PLAYER_PATH: str = "player" #Change player's appearance (player:boy, player_girl: girl):
 
     VICTORY_BACKGROUND: Path = ASSET_DIR / "backgrounds" / "victory.png"
 
@@ -72,7 +74,7 @@ class DialogueBoxConfig:
 class PlayerConfig:
     DEFAULT_X: int = 350
     DEFAULT_Y: int = 400
-    SPRITE_PATH: Path = ASSET_DIR / "player"
+    SPRITE_PATH: Path = ASSET_DIR / GameConfig.PLAYER_PATH
     SCALE: float = 0.16
     GRAVITY: int = 2
     SPEED: int = 7
@@ -124,7 +126,7 @@ class PlayerBulletConfig:
 
 
 class ShadowConfig:
-    SPRITE_PATH: Path = ASSET_DIR / "npcs" / "shadow"
+    SPRITE_PATH: Path = ASSET_DIR / "npcs" / "flying_dinosaur"
     SCALE: float = 0.1
     ANIMATION_INTERVAL_MS: int = 200
     SPEED: int = 1
@@ -132,8 +134,8 @@ class ShadowConfig:
 
 
 class ShadowBossConfig:
-    SPRITE_PATH: Path = ASSET_DIR / "npcs" / "shadow"
-    SCALE: float = 0.6
+    SPRITE_PATH: Path = ASSET_DIR / "npcs" / "flying_red_dinosaur"
+    SCALE: float = 0.2
     ANIMATION_INTERVAL_MS: int = 200
     SPEED: int = 1
     DAMAGE: int = 1
@@ -146,7 +148,7 @@ class ShadowBossConfig:
 
 
 class ShadowBulletConfig:
-    SPRITE_PATH: Path = ASSET_DIR / "items" / "shadow_bullet.png"
+    SPRITE_PATH: Path = ASSET_DIR / "items" / "spikes.png"
     SCALE: float = 0.05
     SPEED: int = 5
     GRAVITY: int = 0.3
@@ -160,7 +162,7 @@ class ShadowBulletConfig:
 
 
 class EndingBurgerConfig:
-    SPRITE_PATH: Path = ASSET_DIR / "items" / "player_bullet.png"
+    SPRITE_PATH: Path = ASSET_DIR / "items" / "chest_with_golds.png"
     SCALE: float = 0.8
     GRAVITY: float = 2.5
 

@@ -156,7 +156,7 @@ class Player(AnimatedEntity):
                 GameEvent(EventType.COLLECT_ITEM, sender_type=self.entity_type).post()
                 logger.info(f"Player picked up 1 {entity.entity_type}")
 
-                if entity.entity_type == EntityType.LEVEL_END_FLAG:
+                if entity.entity_type == EntityType.TIME_MACHINE:
                     GameEvent(EventType.LEVEL_END).post()
 
     def _handle_throw(self):

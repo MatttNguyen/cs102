@@ -26,7 +26,7 @@ class Menu(BaseScene):
             GameConfig.NAME,
             GameConfig.WIDTH,
             GameConfig.HEIGHT,
-            theme=pygame_menu.themes.THEME_SOLARIZED,
+            theme=pygame_menu.themes.THEME_BLUE,
         )
 
         frame = self.menu.add.frame_v(1000, 580)
@@ -48,12 +48,6 @@ class Menu(BaseScene):
                             partial(start_game, level_id),
                         )
                     )
-            frame.pack(
-                self.menu.add.button(
-                    "Victory Scene",
-                    GameEvent(EventType.VICTORY).post,
-                )
-            )
 
         extra_level_ids = [level_id for level_id in available_level_ids if level_id >= 10]
         frame.pack(
@@ -66,6 +60,7 @@ class Menu(BaseScene):
         )
 
         frame.pack(self.menu.add.button("Mute / Unmute", GameEvent(EventType.TOGGLE_SOUND).post))
+        frame.pack(self.menu.add.button("Change gender: "+ GameConfig.PLAYER_GENDER, GameEvent(EventType.TOGGLE_GENDER).post))
         frame.pack(self.menu.add.button("Quit", lambda: GameEvent(pygame.QUIT).post()))
 
     def tick(self, events: Sequence[GameEvent]) -> bool:

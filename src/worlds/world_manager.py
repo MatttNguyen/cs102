@@ -54,6 +54,8 @@ class WorldManager:
                 self.active_world = Menu.__name__
                 self.level_id = None
                 self.worlds[Menu.__name__] = Menu(self.screen, can_resume=False)
+            elif e.is_type(EventType.TOGGLE_GENDER):
+                self.change_gender()
 
             elif e.is_type(EventType.LEVEL_END):
                 e.event.level_id = self.level_id
@@ -126,3 +128,10 @@ class WorldManager:
             if pygame.mixer.music.get_busy():
                 logger.info("Pausing Music")
                 pygame.mixer.music.pause()
+    def change_gender(self):
+        if GameConfig.PLAYER_GENDER == "boy":
+            GameConfig.PLAYER_PATH = "player_girl"
+            GameConfig.PLAYER_GENDER = "girl"
+        if GameConfig.PLAYER_GENDER == "girl":
+            GameConfig.PLAYER_PATH = "player"
+            GameConfig.PLAYER_GENDER = "boy"
