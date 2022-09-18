@@ -56,7 +56,7 @@ def handle_music_events(events: Sequence[GameEvent], sound_on: bool):
     for e in events:
         if e.is_type(EventType.START_GAME):
             level_id = e.get_level_id()
-            level_music_path = ASSET_DIR / "sounds" / "background" / f"level_{level_id}.wav"
+            level_music_path = ASSET_DIR / "sounds" / "background" / f"level_{level_id}.mp3"
             load_music(level_music_path, volume=GameConfig.INGAME_MUSIC_VOLUME, play=sound_on)
 
         elif e.is_type(EventType.SHOW_MENU_AND_RESET_LEVEL_ID):

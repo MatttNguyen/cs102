@@ -38,6 +38,7 @@ class EntityType(enum.Enum):
     # Collectable Items 60 -> 79
     DIAMONDS = 60
     BOMB = 61
+    GOLDEN_CHEST = 62
 
     # When the player collects this item, the level ends.
     # For regular levels (ie. no special end-level condition), when designing the CSV file
@@ -63,6 +64,7 @@ COLLECTABLE_TYPES = (
     EntityType.TIME_MACHINE,
     EntityType.DIAMONDS,
     EntityType.BOMB,
+    EntityType.GOLDEN_CHEST,
 ) + TRAMPOLINE_PART_TYPES
 
 FIXED_POSITION_TYPES = (EntityType.DIALOGUE_BOX, EntityType.PLAYER_HP, EntityType.PLAYER_INVENTORY)

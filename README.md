@@ -1,22 +1,8 @@
-# STEAM for Vietnam - CS 102 
-
-Xem ghi chú tóm tắt các bài học: [LINK](https://github.com/STEAMforVietnam/cs102/tree/lesson-notes/notes)
-
-## Miêu tả dự án
-
-<TODO: điền thêm thông tin dự án cuối khoá của bạn khi nộp bài>
-
-## Đường dẫn đến phiên bản cuối mỗi bài học
-
-1. [Crazy Robot](https://github.com/STEAMforVietnam/cs102/tree/ls1/)
-2. [Crazy Robot](https://github.com/STEAMforVietnam/cs102/tree/ls2-5)
-3. Bài học ôn tập Python căn bản
-4. [Thách thức giới hạn](https://github.com/STEAMforVietnam/cs102/tree/ls4-5)
-5. Bài đặc biệt về thiết kế trò chơi và công cụ Figma
-6. [Bí Ẩn STEAM Valley](https://github.com/STEAMforVietnam/cs102/tree/ls6-final)
-7. [Lần theo dấu vết](https://github.com/STEAMforVietnam/cs102/tree/ls7-final)
-8. Bài đặc biệt về thiết kế trò chơi và công cụ Figma
-9. [Tìm kiếm sức mạnh](https://github.com/STEAMforVietnam/cs102/tree/ls9-five)
-10. [Vượt qua đối thủ đáng gờm](https://github.com/STEAMforVietnam/cs102/tree/ls10-four)
-11. [Năng lượng hạnh phúc](https://github.com/STEAMforVietnam/cs102/tree/ls11-final)
-12. [Khúc ca chiến thắng](https://github.com/STEAMforVietnam/cs102/tree/master)
+Trò chơi: Cót két phiêu lưu ký
+Tác giả: Nguyễn Nguyên Khoa, Hứa Khoa Minh
+Thiết kế hình ảnh: Nguyễn Thị Mỹ Hạnh (mẹ của Nguyên Khoa)
+Kịch bản dựa trên hai hình tượng mọi trẻ em yêu thích và tò mò: Robot và Khủng long bay.
+Bao gồm 6 vòng chơi dẩn dắt người chơi đi khám phá nhiều vùng đất thú vị mà mọi trẻ đều muốn đặt chân đến: Phòng thí nghiệm robot, Rừng rậm, Vùng băng tuyết Bắc Cực, Trạm không gian, ...
+Hiệu ứng âm thanh: chosic.com
+Kinh nghiệm và kiến thức: Tài trợ bởi Steam For Vietnam.
+Chúng con chân thành cảm ơn các thầy cô đã hướng dẫn và truyền đạt kiến thức cho chúng con.
