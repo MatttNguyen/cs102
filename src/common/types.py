@@ -37,7 +37,7 @@ class EntityType(enum.Enum):
 
     # Collectable Items 60 -> 79
     DIAMONDS = 60
-    BOMB = 61
+    SHARDS = 61
     GOLDEN_CHEST = 62
 
     # When the player collects this item, the level ends.
@@ -63,7 +63,7 @@ TRAMPOLINE_PART_TYPES = (EntityType.TRAMPOLINE_PART_SPRING, EntityType.TRAMPOLIN
 COLLECTABLE_TYPES = (
     EntityType.TIME_MACHINE,
     EntityType.DIAMONDS,
-    EntityType.BOMB,
+    EntityType.SHARDS,
     EntityType.GOLDEN_CHEST,
 ) + TRAMPOLINE_PART_TYPES
 
